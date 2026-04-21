@@ -1,5 +1,4 @@
 import { motion, useInView } from "motion/react"
-import { section } from "motion/react-client"
 import { useRef } from "react"
 import { Heart, Palette, Lightbulb } from 'lucide-react'
 
@@ -18,7 +17,7 @@ export default function About() {
             icon: Palette,
             title: "Obsessed with Colors",
             description: "Soft, pastel colors are my  canvas. I believe the right color palette can evoke emotions and create memorable experiences.",
-            color: "var(--color-lavender",
+            color: "var(--color-lavender)",
         },
         {
             icon: Lightbulb,
@@ -70,6 +69,17 @@ export default function About() {
                         </motion.div>
                     ))}
                 </div>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : {}}
+                    transition={{ duration: 0.8, delay: 0.8 }}
+                    className="mt-20 text-center max-w-4xl mx-auto p-12 rounded-3xl"
+                    style={{ background: "linear-gradient(135deg, var(--color-lavender), var(--color-peach))" }}
+                >
+                    <p className="text-2xl leading-relaxed" style={{ fontWeight: "500" }}>
+                        "I believe great design is where art meets functionality. Every project is an opportunity to create something that not only looks beautiful but also solves real problems."
+                    </p>
+                </motion.div>
             </div>
         </section>
     )

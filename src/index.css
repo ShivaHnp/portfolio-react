@@ -3,10 +3,12 @@
 @tailwind utilities;
 
 
+
 :root {
-  --color-lavender: #c4b5fd;
-  --color-mint: #6ee7b7;
-  --color-peach: #fca5a5;
-  --color-rose: #f9a8d4;
-  --color-cream: #fef3c7;
+  --color-lavender: #e3def8;  /* بنفش ملایم */
+  --color-mint:     #a7f3d0;  /* سبز ملایم */
+  --color-peach:    #fbdebc;  /* هلویی ملایم */
+  --color-sky:      #bae6fd;  /* آبی ملایم */
+  --color-rose:     #fecdd3;  /* صورتی ملایم */
+  --color-cream:    #fef9c3;  /* کرم ملایم */
 }
