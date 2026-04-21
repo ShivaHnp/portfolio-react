@@ -144,7 +144,7 @@ export default function Contact() {
 
                                 </motion.a>
                                 <motion.a 
-                                    href="https://linkedin.com/in/shiva-hassanpour-8335081ba"
+                                    href="https://github.com/ShivaHnp"
                                     whileHover={{x: 10}}
                                     className='flex items-center gap-4 p-4 rounded-2xl '
                                     style={{background: "var(--color-lavender)"}}
