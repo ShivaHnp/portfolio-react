@@ -34,13 +34,33 @@ export default function Header() {
 
                     {/* Desktop Nav */}
                     <nav className="hidden md:flex items-center gap-8">
-                        <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Home</a>
-                        <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors">About</a>
-                        <a href="#projects" className="text-gray-600 hover:text-gray-900 transition-colors">Projects</a>
-                        <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
+                        <a 
+                            href="#" 
+                            className="text-gray-600 hover:text-gray-900 transition-colors"
+                            >Home
+                            </a>
+                        <a 
+                            href="#about" 
+                            className="text-gray-600 hover:text-gray-900 transition-colors"
+                            onClick={() => document.querySelector('#about')?.scrollIntoView({ behaviour: 'smooth' })}
+                            >About
+                            </a>
+                        <a 
+                            href="#projects" 
+                            className="text-gray-600 hover:text-gray-900 transition-colors"
+                            onClick={() => document.querySelector('#portfolio')?.scrollIntoView({ behaviour: 'smooth' })}
+                            >Projects
+                            </a>
+                        <a 
+                            href="#contact" 
+                            className="text-gray-600 hover:text-gray-900 transition-colors"
+                            onClick={() => document.querySelector('#contact')?.scrollIntoView({ behaviour: 'smooth' })}
+                            >Contact
+                            </a>
                     </nav>
 
                     <motion.button
+                        onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="hidden md:block px-6 py-2 rounded-full text-white bg-gradient-to-br from-[#667eea] to-[#764ba2]"

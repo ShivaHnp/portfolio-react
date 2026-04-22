@@ -29,7 +29,7 @@ export default function About() {
 
     return (
         <section className="py-32 px-6" ref={ref}>
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto" id="about">
                 <motion.div
                     initial= {{ opacity:0, y: 30}}
                     animate = {isInView ? {opacity: 1, y: 0} : {}}

@@ -8,26 +8,26 @@ export default function Hero() {
         // starting with animated circles
         <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-6">
             <motion.div
-                className='absolute top-20 left-10 w-64 h-64 rounded-full opacity-20'
+                className='absolute top-20 left-10 w-64 h-64 rounded-full opacity-50'
                 style= {{ background: "var(--color-lavender)" }}
                 animate={{ y: [0, 30, 0], scale: [1, 1.1, 1] }}
                 transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
             />
             <motion.div
-                className="absolute bottom-20 right-20 w-80 h-80 rounded-full opacity-20"
+                className="absolute bottom-20 right-20 w-80 h-80 rounded-full opacity-50"
                 style={{ background: "var(--color-mint)" }}
                 animate={{ y: [0, -40, 0], scale: [1, 1.2, 1] }}
                 transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
             />
 
             <motion.div
-                className="absolute top-1/2 right-1/3 w-48 h-48 rounded-full opacity-20"
+                className="absolute top-1/2 right-1/3 w-48 h-48 rounded-full opacity-50"
                 style={{ background: "var(--color-peach)" }}
                 animate={{ x: [0, 30, 0], y: [0, -30, 0] }}
                 transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
             />
             <motion.div
-                className="absolute top-3 left-1/4 w-56 h-56 rounded-full opacity-20"
+                className="absolute top-3 left-1/4 w-56 h-56 rounded-full opacity-50"
                 style={{ background: "var(--color-rose)" }}
                 animate={{ x: [0, -20, 0], y: [0, 20, 0], scale: [1, 1.15, 1] }}
                 transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
@@ -80,6 +80,7 @@ export default function Hero() {
                     className="flex flex-col sm:flex-row gap-5 justify-center items-center"
                 >
                     <motion.button
+                        onClick={() => document.querySelector('#portfolio')?.scrollIntoView({ behaviour: 'smooth' })}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="px-8 py-4 rounded-full text-white shadow-lg hover:shadow-xl transition-shadow"
@@ -88,13 +89,15 @@ export default function Hero() {
                         View My Work
                     </motion.button>
 
-                    <motion.button
+                    <motion.a
+                        href='CV-Hassanpour-Shiva.pdf'
+                        download
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="px-8 py-4 rounded-full border-2 border-gray-300 hover:border-gray-400 transition-colors"
                     >
-                        Get in Touch
-                    </motion.button>
+                        Download CV
+                    </motion.a>
                 </motion.div>
             </div>
             {/* Arrow */}

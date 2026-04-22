@@ -1,6 +1,7 @@
 import { motion, useInView } from 'motion/react'
 import { useRef, useState } from 'react'
 import { Mail, Send } from 'lucide-react'
+import emailjs from '@emailjs/browser'
 
 export default function Contact() {
     const ref = useRef(null)
@@ -13,8 +14,23 @@ export default function Contact() {
 
     // submit handling
     const handleSubmit = () => {
-        alert("Thank you for your message! I'll get back to you soon.")
-        setFormData()
+        emailjs.send(
+            'service_dy741li',
+            'template_wsaum97',
+            {
+                from_name: formData.name,
+                from_email: formData.email,
+                message: formData.message,
+            },
+            'acQs29dQFXtffBozu'
+        )
+        .then(() => {
+            alert("Message sent successfully! I'll get back to you soon. 🙂")
+            setFormData({ name: "", email: "", message: "" })
+        })
+        .catch(() => {
+            alert("Something went wrong. Please try again.")
+        })
     }
 
     return (

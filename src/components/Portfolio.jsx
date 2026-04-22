@@ -13,14 +13,14 @@ export default function Portfolio() {
       title: "Personal Portfolio",
       category: "Frontend Development",
       description: "A colorful, animated portfolio built with React, Tailwind CSS, and Framer Motion.",
-      image: "public/images/portfolio-img.png",
+      image: "/images/portfolio-img.png",
       color: "var(--color-lavender)",
     },
     {
       title: "Todo App",
       category: "JavaScript",
       description: "A fully functional todo app built with vanilla JavaScript with local storage persistence.",
-      image: "public/images/Todo-app.png",
+      image: "/images/Todo-app.png",
       color: "var(--color-sky)",
     },
     // {
